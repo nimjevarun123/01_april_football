@@ -12,11 +12,11 @@ class win_loss():
 
     def import_files(self):
 
-        with open(config.model_path,"rb") as m_file:
+        with open("artifacts\binary_clas_model.pkl","rb") as m_file:
             self.bmodel = pickle.load(m_file)
     
 
-        with open(config.json_path,'r') as in_file: 
+        with open('artifacts\Input_Features.json','r') as in_file: 
             self.input_features = json.load(in_file)
 
     def prediction(self):
